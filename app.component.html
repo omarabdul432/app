@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg">
+
+    <div>
+      <a class="navbar-brand fw-bold fs-4">GlamourGrove</a>
+    </div>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse " id="navbar">
+      <ul class="navbar-nav me-3 ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="categories">Categories</a>
+        </li>
+
+
+      </ul>
+
+      <a><i class="bi bi-cart3 me-3 position-relative" routerLink="cart"><span class="badge rounded-pill bg-primary top-0">{{cart}}</span></i></a>
+
+
+      <div class="text-center d-flex mb-0  me-3">
+        <i class="bi bi-person-circle "></i>
+        <span class="ms-2 fw-bold">{{user}}</span>
+      </div>
+      @if(user){
+      <div>
+        <button class="btn btn-danger" (click)="logout()">Signout</button>
+      </div>
+      }
+      @if (!user) {
+      <div>
+        <button class="btn button" routerLink="signin">SignIn</button>
+      </div>
+      }
+    </div>
+
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

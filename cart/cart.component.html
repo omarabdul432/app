@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <p class="fs-2 fw-bold">Shopping Cart</p>
+        <p class="fw-bold fs-3  text-success">Total : $ {{cart.getTotal()}}</p>
+    </div>
+    <div class="row" *ngFor="let item of cart.getItems()">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center ">
+            <img [src]="item.imageURL" alt="">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5   text-center-sm">
+            <p class="fs-1"> <span>{{item.title}}</span></p>
+            <p class="fs-3 text-success fw-bold"><span>$ {{item.price}}</span></p>
+            <p>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. Symbol of lightness
+                and delicacy, the hummingbird evokes curiosity and joy. Studio Design' PolyFaune collection features
+                classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a
+                chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a
+                color, guaranteed overtime</p>
+            <p class="fw-bold">Quantity : <span>{{item.quantity}}</span></p>
+            <button (click)="decrement(item.id)" class="inc btn">-</button><span class="p-3">{{item.quantity}}</span>
+            <button (click)="increment(item.id)" class="inc btn">+ </button>
+            <div class="mt-3">
+                <button class="btn btn-danger" (click)="onDelete(item)">Delete</button>
+                <button class="btn btn-secondary ms-2" (click)="onBack()">Back to Shopping</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

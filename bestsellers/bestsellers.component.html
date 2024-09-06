@@ -1,0 +1,24 @@
+<div class="row mt-5">
+    <h3 class="fs-1 mt-5 text-center">Best Sellers</h3>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let item of productList">
+        <div class="row justify-content-center scroll">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="card border-0 mt-5 mb-5 p-0 card_content">
+                    <div>
+                        <img [src]="item.imageURL" alt="" width="100%">
+                        <div class="text-center lh-1 mt-3">
+                            <p>$ {{item.price}}</p>
+                            <p class="">{{item.title}}</p>
+                        </div>
+                    </div>
+        
+                    <div class="card_content_icon">
+                        <a class="border p-2 rounded-5 bg-light "><i class="bi bi-search text-dark"></i></a>
+                        <a class="border p-2 rounded-5 bg-light ms-2"><i class="bi bi-cart3 text-dark"></i></a>
+                        <a class="border p-2 rounded-5 bg-light ms-2"><i class="bi bi-heart text-dark"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

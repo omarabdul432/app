@@ -1,0 +1,34 @@
+.row {
+    background-color: #F2F2F2;
+
+    .card_content {
+        position: relative;
+
+        &_icon {
+            position: absolute;
+            right: 35%;
+            top: 70%;
+            // display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &_icon {
+                display: flex;
+                z-index: 10;
+            }
+
+        }
+
+    }
+}
+
+// @media (max-width:550px){
+//     .scroll{
+//         // display: flex;
+//         // flex-direction: row;
+        
+//         // overflow-y:scroll ;
+//     }
+// }

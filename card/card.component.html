@@ -1,0 +1,24 @@
+
+    <div class="row justify-content-center ">
+        <h3 class="text-center mt-5 fs-1">New Arrivals</h3>
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3 scroll" *ngFor="let product of productList">
+            <div class="card p-0 mt-5 text-center border-0 mb-5 card_content">
+                <div>
+                    <img [src]="product.imageURL" alt="" width="100%" >
+                  <div class="mt-3 lh-1">
+                    <p class="">${{product.price}}</p>
+                    <p>{{product.title}}</p>
+                  </div>
+                </div>
+                <div class="card_content_icon"> 
+                     <a class="border rounded-5 p-2 ms-2 bg-light"><i class="bi bi-search text-dark"></i></a>
+                     <a class="border rounded-5 p-2 ms-2 bg-light" (click)="addCart(product)"><i class="bi bi-cart3 text-dark"></i></a>
+                     <a class="border rounded-5 p-2 ms-2 bg-light"><i class="bi bi-heart text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ 

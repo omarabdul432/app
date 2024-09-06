@@ -1,0 +1,26 @@
+.row {
+    background-color: #F2F2F2;
+
+    .card_content {
+        position: relative;
+
+        &_icon {
+            position: absolute;
+            right: 35%;
+            top: 70%;
+            // display: none;
+
+        }
+       &_icon a:hover{
+        cursor: pointer;
+       }
+    }
+
+    .card_content img:hover {
+        cursor: pointer;
+
+        &_icon a {
+            display: block;
+        }
+    }
+}

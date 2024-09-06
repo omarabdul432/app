@@ -1,0 +1,25 @@
+<div class="row mt-5 justify-content-center">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex gap-2">
+        <div class="card text-center lh-1 bg" style="height: 500px;">
+            <div class="bg_content">
+                <p class=" fs-1 text-light">High Quality</p>
+                <p class="text fs-1">Fashion wear</p>
+                <div class="lh-lg text-light">
+                    <p>Modern and stylish clothing with a contemporary look. Bazza Extended collection features</p>
+                </div>
+                <button class="btn btn text-decoration-underline ">SHOP NOW</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let item of productList">
+       <div class="card p-0 border-0">
+        <img [src]="item.imageURL" alt="">
+        <p class="fw-bold mt-3">{{item.title}}</p>
+        <p class="">{{item.description}}</p>
+       </div>
+    </div>
+</div>
+
+
+

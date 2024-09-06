@@ -1,0 +1,15 @@
+.row{
+    .bg{
+        background-color: #007566;
+        &_content{
+            margin-top: 150px;
+        }
+        .text{
+            color: #ddba76;
+        }
+        .btn{
+            color: #ddba76;
+            letter-spacing: 3px;
+        }
+    }
+}

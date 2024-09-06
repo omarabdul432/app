@@ -1,0 +1,10 @@
+.container-fluid{
+   
+    .button{
+        background-color: #10454F;
+        color: #F2F2F2;
+        &:hover{
+            background-color: red;
+        }
+    }
+}
