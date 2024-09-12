@@ -24,11 +24,12 @@
     }
 }
 
-// @media (max-width:550px){
-//     .scroll{
-//         // display: flex;
-//         // flex-direction: row;
-        
-//         // overflow-y:scroll ;
-//     }
-// }
+@media (max-width:650px){
+    .row{
+        justify-content: center;
+       
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-align: start;
+    }
+}

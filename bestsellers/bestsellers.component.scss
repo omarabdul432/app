@@ -24,3 +24,12 @@
         }
     }
 }
+@media (max-width:650px){
+    .row{
+        justify-content: center;
+       
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-align: start;
+    }
+}
